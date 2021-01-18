@@ -5,8 +5,8 @@ compiled with mingw gcc 4.8.1 32-bit release
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
-#define QS 10
-void ir(int i,int *r,int q[])
+#define QS 10//Maximum Queue size As this program is to show to how to implement a Double Ended Queue
+void ir(int i,int *r,int q[])//Insert from Rear
 {
     if(*r==QS-1)
     {
@@ -16,7 +16,7 @@ void ir(int i,int *r,int q[])
     q[++(*r)]=i;
     printf("\nItem inserted successfully");
 }
-void df(int q[],int *f,int *r)
+void df(int q[],int *f,int *r)//Delete from Front
 {
     if(*f>*r)
     {
@@ -30,7 +30,7 @@ void df(int q[],int *f,int *r)
         *r=-1;
     }
 }
-void i_f(int i,int *r,int *f,int q[])
+void i_f(int i,int *r,int *f,int q[])//Insert from Front
 {
     if(*f==0&&*r==-1)
     {
@@ -46,7 +46,7 @@ void i_f(int i,int *r,int *f,int q[])
     }
     printf("\nFront insertion is not POSSIBLE !!!!");
 }
-void dr(int q[],int *f,int *r)
+void dr(int q[],int *f,int *r)//Delete from Rear
 {
     if(*f>*r)
     {
